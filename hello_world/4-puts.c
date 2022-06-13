@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main: prints a text
- * description: this function prints a text
- * return: zero to confirm
+ * main - Prints a text
+ * Description: this function prints a text
+ * Return: zero to confirm
  */
 int main(void)
 {
