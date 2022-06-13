@@ -5,9 +5,8 @@
  * Description: This function prints the text
  * Return: zero to confirm everything went well
  */ 
-
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
