@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * * main - Print a text
- * * Description: This function prints another text
- * * Return: zero, meaning everything went well.
- * */
+ * main - Print a text
+ * Description: This function prints another text
+ * Return: zero, meaning everything went well.
+ */
 
 int main(void)
 {
