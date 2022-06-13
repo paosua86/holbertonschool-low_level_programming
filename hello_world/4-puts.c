@@ -1,12 +1,12 @@
 #include <stdio.h>
-
-/**
- * main - Prints a specific text
- * Description: This function prints the text
- * Return: zero to confirm everything went well
- */ 
+/** 
+ * main prints a text
+ * this function prints a text
+ * return: zero to confirm
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
+
