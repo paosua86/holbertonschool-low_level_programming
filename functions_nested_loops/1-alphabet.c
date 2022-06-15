@@ -1,10 +1,12 @@
 #include "main.h"
 /**
  * main - function that prints the alphabet
- * Description: in lowercase, followed by a new line
+ * Description description 
+ * for function print_alphabet
  * @int: alphabet
  * Return: zero
  */
+int main(void)
 void print_alphabet(void)
 {
 
