@@ -5,16 +5,14 @@
  * @int: alphabet
  * Return: zero
  */
-void print_alphabet(void);
+void print_alphabet(void)
 {
-	
-	char letter = 'a';
 
-	while (letter <= 'z')
+	char r;
+
+	for (r = 'a'; r <= 'z'; r++)
 	{
-		_putchar(letter);
-		letter++;
+		_putchar(r);
 	}
 	_putchar('\n');
-	return (0);
 }
