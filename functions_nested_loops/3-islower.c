@@ -1,6 +1,7 @@
 #include "main.h"
  /**
 	* _islower - check lowercase character
+	* @c: integer 1 or 0
 	* Description: print alphabet 10 times
 	* Return: zero
 */
