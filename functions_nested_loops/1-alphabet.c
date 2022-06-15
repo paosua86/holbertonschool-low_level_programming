@@ -1,13 +1,14 @@
 #include "main.h"
 /**
  * main - function that prints the alphabet
- * Description description 
+ * Description description
  * for function print_alphabet
- * @int: alphabet
+ * int: alphabet
  * Return: zero
  */
 
 void print_alphabet(void)
+
 {
 
 	char r;
