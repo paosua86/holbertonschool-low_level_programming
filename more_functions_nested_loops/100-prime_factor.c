@@ -7,19 +7,19 @@
 
 int main(void)
 {
-		num = 612852475143;
-		divisor = 2;
+		long num = 612852475143;
+		long divisor = 2;
+		long larg_prim = 0;
 
-		while (divisor < num)
+		while (num != 1)
 		{
 			if (num % divisor == 0)
 			{
-				num /= divisor;
-				divisor = 2;
+				num = num / divisor;
+				larg_prim = divisor;
 			}
-			else
-				divisor++;
+			divisor += 1;
 		}
-		printf("%lu\n", num);
+		printf("%ld\n", larg_prim);
 		return (0);
 }
