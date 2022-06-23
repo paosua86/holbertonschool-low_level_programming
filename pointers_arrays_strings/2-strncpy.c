@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * _strncat - concatenates the string from a pointer to another
+ * _strncpy - Write a function that copies a string
  * @src: pointer that has the string to be concatenated
  * @dest: pointer that will have its string concatenated with the other
  * Return: strings concatenated to dest
  * @n: number of characters
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 		int i;
 
