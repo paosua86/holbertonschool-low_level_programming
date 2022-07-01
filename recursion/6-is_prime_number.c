@@ -1,34 +1,40 @@
 #include <stdio.h>
 #include "main.h"
 /**
-	* is_prime_number - returns prime number
-	* @n: integer
-	* @m: integer
-	* Return: 0 or 1
+ * number_prime - function that gets prime
+ * @x: enteger
+ * @y: enteger
+ * Return: enteger
  */
 
-int prime_num(int n, int m)
+int number_prime(int x, int y)
 {
-		if (n == m)
-		{
-			return (1);
-		}
-		else if (n % m == 0)
-		{
-			return (0);
-		}
-		else
-		{
-			return (prime_num(n, m + 1));
-		}
+	if (x == y)
+	{
+		return (1);
+	}
+	else if (x % y == 0)
+	{
+		return (0);
+	}
+	return (number_prime(x, y + 1));
 }
-/*
- * prime_num - goes through every number to check if it is prime
-*/
+/**
+	* is_prime_number -  returns a prime number
+	* @n: integer
+	* Return: depends
+	*/
 
 int is_prime_number(int n)
 {
-	if (n < 2)
+	if (n <= 1)
+	{
 		return (0);
-	return (prime_num(n, 2));
+	}
+	if (n < 0)
+	{
+		return (number_prime(n, 2));
+	}
+	else
+		return (-1);
 }
