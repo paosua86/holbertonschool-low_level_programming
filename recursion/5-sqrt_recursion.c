@@ -2,20 +2,26 @@
 #include "main.h"
 
 /**
- * 14  * _number_square - function that gets square
- * 13  * @x: enteger
- * 12  * @y: entegerCounter variable
- * 11  * Return: enteger
- * 10  */
+ * number_square - function that gets square
+ * @x: enteger
+ * @y: entegerCounter variable
+ * Return: enteger
+ */
 
 int number_square(int x, int y)
 {
 	if (x == (y * y))
+	}
 		return (y);
+	}
 	else if (x > (y * y))
-	  return (number_square(x, y + 1));
+	{
+		return (number_square(x, y + 1));
+	}
 	else
-	  return (-1);
+	{
+		return (-1);
+	}
 }
 
 /**
