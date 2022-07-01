@@ -11,7 +11,7 @@
 int number_square(int x, int y)
 {
 	if (x == (y * y))
-	}
+	{
 		return (y);
 	}
 	else if (x > (y * y))
