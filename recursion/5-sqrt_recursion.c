@@ -1,5 +1,23 @@
 #include <stdio.h>
 #include "main.h"
+
+/**
+ * 14  * _number_square - function that gets square
+ * 13  * @x: enteger
+ * 12  * @y: entegerCounter variable
+ * 11  * Return: enteger
+ * 10  */
+
+int number_square(int x, int y)
+{
+	if (x == (y * y))
+		return (y);
+	else if (x > (y * y))
+	  return (number_square(x, y + 1));
+	else
+	  return (-1);
+}
+
 /**
 	* _sqrt_recursion -  returns the natural square root of a number
 	* @n: integer
@@ -8,22 +26,20 @@
 
 int _sqrt_recursion(int n)
 {
-	int sqrt = n / 2;
-	int temp = 0;
-
-	if (sqrt != temp)
-	{
-		temp = sqrt;
-		sqrt = (n / temp + temp) / 2;
-		return sqrt;
-	}
-	else if (n < 0)
-	{
-		return (-1);
-	}
-	else if (n == 0)
-	{
+	if (n == 0)
 		return (0);
-	}
-	return (0);
+	if (n == 1)
+		return (1);
+	if (n < 0)
+		return (-1);
+	return (number_square(n, 1));
 }
+
+
+/**
+ * _number_square - function that gets square
+ * @x: enteger
+ * @y: entegerCounter variable
+ * Return: enteger
+ */
+
