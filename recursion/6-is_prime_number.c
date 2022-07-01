@@ -36,5 +36,5 @@ int is_prime_number(int n)
 		return (number_prime(n, 2));
 	}
 	else
-		return (-1);
+		return (1);
 }
