@@ -10,12 +10,8 @@
 
 int main (int argc, char *argv[])
 {
-	int = 1;
-
-	if (argv > 1)
-	{
-		printf("argv[%d] = %s\n", i, argv[i]);
-	}
+	printf("%s\n", argv[argc * 0]);
+	
 	return 0;
 }
 
