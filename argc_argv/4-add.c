@@ -1,34 +1,35 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
-#include "main.h"
+#include <stdlib.h>
+
 /**
- * main - write a program that multiplies two numbers
- * @argc: count
- * @argv: vector
+ * main - entry point
+ * Description: Adds positive numbers
+ * @argc: amount of arguments passed through the program
+ * @argv: pointer that contains the arrays of the arguments
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	int sum, j, i;
+	int i, j, sum = 0;
 
-	if (argc < 2)
-		printf("0\n");
-
-	else if (argc > 1)
+	if (argc == 1)
 	{
-		for (i = 1; argc > i; i++)
+		printf("0\n");
+	}
+	else
+	{
+		for (i = 1; i < argc; i++)
 		{
-			for (j = 0; argv[i][j] != '\0'; j++)
+			for (j = 0; argv[i][j] != 0; j++)
 			{
-				if (!isdigit(argv[i][j]))
+				if (argv[i][j] > 58 || argv[i][j] < 47)
 				{
 					printf("Error\n");
 					return (1);
 				}
 			}
-			sum += atoi(argv[i]);
+			sum = sum + atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 	}
