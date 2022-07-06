@@ -3,16 +3,17 @@
 #include <stdlib.h>
 
 /**
- * main - function that creates an array of chars, and initializes it with a specific char
+ * create_array - function that creates an array of chars,
+ * and initializes it with a specific char
  * @size: int
  * @c: char
- * Return: 
+ * Return: a
  */
 
 char *create_array(unsigned int size, char c)
 {
 	char *a;
-	unsigned int i; 
+	unsigned int i;
 
 	if (size == '0')
 		return (NULL);
@@ -26,5 +27,4 @@ char *create_array(unsigned int size, char c)
 		*(a + i) = c;
 
 	return (a);
-}	
-
+}
