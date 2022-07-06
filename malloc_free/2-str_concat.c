@@ -2,41 +2,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * alloc_grid - creates a 2D array and returns the pointer to the memory
- * @width: width of the 2D array
- * @height: height of the 2D array
- * Return: a pointer to the 2D array or NULL if the process fails
+/*
+ * str_concat - Write a function that concatenates two strings
+ * @s1: first string.
+ * @s2: second string.
+ * Return: pointer of an array of chars
  */
 
-int **alloc_grid(int width, int height)
+char *str_concat(char *s1, char *s2)
 {
-	int **grid, i, j;
+	int i, j, k;
+	char *newStr = NULL;
 
-	if (width <= 2 || height <= 2)
-	{
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+	  s2 = "";
+
+	for (i = 0; s1[i] != '\0'; i++);
+
+	for (j = 0; s2[j] != '\0'; j++);
+
+	newStr = (char*)malloc((i + j) * sizeof(char));
+
+	if (newStr == NULL)
 		return (NULL);
-	}
-	grid = malloc(sizeof(int *) * height);
-	if (grid == NULL)
-	{
-		return (NULL);
-	}
-	for (i = 0; i < height; i++)
-	{
-		grid[i] = malloc(sizeof(int) * width);
-		if (grid[i] == NULL)
-		{
-			for (j = 0; j < i; j++)
-			{
-				free(grid[j]);
-			}
-			free(grid);
-		}
-		for (j = 0; j < width; j++)
-		{
-			grid[i][j] = 0;
-		}
-	}
-	return (grid);
+
+	for (k = 0; s1[k] != '\0'; k++)
+		newStr[k] = s1[k];
+
+	for (k = 0; s2[k] != '\0'; k++)
+	  newStr[k + i] = s2[k];
+
+	return (newStr);
 }
