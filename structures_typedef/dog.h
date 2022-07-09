@@ -1,8 +1,16 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
-#include <stdio.h> 
+#include <stdio.h>
 
-struct dog {
+/**
+ * struct dog - structure
+ * @name: char name of dog
+ * @age: float age of dog
+ * @owner: char owner of dog
+ */
+
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
