@@ -10,24 +10,35 @@
 
 int main(int argc, char *argv[])
 {
-	int (*op)(int, int);
-	int result, a, b;
+	int result, num1, num2;
+	int (*ptr)(int, int);
 
-	if (argc != 4)
+	if (argc < 4 || argv[1] == NULL || argv[3] == NULL)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	op = get_op_func(argv[2]);
-	if (op == NULL)
+	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+
+	ptr = get_op_func(argv[2]);
+
+	if (ptr == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	result = op(a, b);
+
+	result = ptr(num1, num2);
+
 	printf("%d\n", result);
+
 	return (0);
 }
