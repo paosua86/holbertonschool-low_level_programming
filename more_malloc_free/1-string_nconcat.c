@@ -18,10 +18,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int lens1, i;
 
 	if (s1 == NULL)
+	{
 		s1 = "";
+	}
 	if (s2 == NULL)
+	{
 		s2 = "";
-
+	}
 	for (lens1 = 0; s1[lens1] != '\0'; lens1++)
 	{}
 
