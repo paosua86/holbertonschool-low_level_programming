@@ -18,10 +18,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *nconcat;
 
 	if (s1 == NULL)
-		return (NULL);
+		return ("");
 
 	if (s2 == NULL)
-		return (NULL);
+		return ("");
 
 	for (i = 0; s1[i]; i++)
 	{}
