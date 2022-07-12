@@ -1,46 +1,46 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
- * string_nconcat - Write a function that concatenates two strings
- * @s1: char
- * @s2: char
- * @n: size
- * Return: s
+ * string_nconcat - Write a function that
+ * concatenates two strings
+ * @s1: first string.
+ * @s2: second string
+ * @n: int is greater or equal to the length of s2
+ * then use the entire string s2
+ * Return: pointer of an array of chars
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	
-	char *sn = NULL;
-	int j;
-	unsigned int i, leng1, leng2, nnew = n;	
+	unsigned int i, j, k;
+	char *nconcat;
 
 	if (s1 == NULL)
-		s1 = "";
+		return (NULL);
+
 	if (s2 == NULL)
-		s2 = "";
+		return (NULL);
 
-	leng1 = strlen(s1);
-	leng2 = strlen(s2);
-	
-	if (n >= leng2)
-		nnew = leng2;
+	for (i = 0; s1[i]; i++)
+	{}
+	for (j = 0; s2[j]; j++)
+	{}
+	if (n <= j)
+		k = n;
 
-	sn = malloc(sizeof(sn) * (leng1 + nnew));
+	nconcat = malloc(sizeof(nconcat) * (i + k + 1));
+	if (nconcat == NULL)
+		return (NULL);
 
-	for (i = 0; i != leng1 + nnew ; i++)
-	{
-		if (i < leng1)
-			sn[i] = s1[i];
-		else
-		{
-			sn[i] = s2[j];
-			j++;
-		}
-	}
-	sn[leng1 + nnew] = '\0';
-	return (sn);
+	for (i = 0; s1[i]; i++)
+		nconcat[i] = s1[i];
+
+	for (j = 0; s2[j] != '\0' && j < n; i++, j++)
+		nconcat[i] = s2[j];
+
+	nconcat[i] = '\0';
+
+	return (nconcat);
 }
-
