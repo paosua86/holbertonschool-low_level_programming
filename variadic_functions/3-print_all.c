@@ -9,7 +9,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list p_all;
-	int i = 0, j = 0; 
+	int i = 0, j; 
 	char *str;
 	char letter[] = {'c', 'i', 'f', 's'};
 
@@ -36,11 +36,15 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", str);
 				break;
-		} 
-		for (j = 0; j < 4; j++)
+		}
+		j = 0;
+		while (j < 4)
 		{	
 			if ((letter[j] == format[i]) && format[i + 1])
+			{
 				printf(", ");
+			}
+			j++;
 		}
 		i++;
 	}
