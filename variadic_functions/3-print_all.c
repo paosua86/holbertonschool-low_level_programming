@@ -10,24 +10,16 @@ void print_all(const char * const format, ...)
 {
 	va_list p_all;
 	int i = 0, j = 0; 
-	const char form[] = "cifs";
 	char *str;
+	char letter[] = {'c', 'i', 'f', 's'};
 
 	va_start(p_all, format);
-	while (format[i] && format)
+	while (format != NULL && format[i])
 	{
-		while (form[j])
-		{
-			if (format[i] == form[j])
-			{
-				printf(", ");
-				break;
-			} j++;
-		}
 		switch (format[i])
 		{	
 			case 'c':
-				printf("%s", va_arg(p_all, char*));
+				printf("%c", va_arg(p_all, int));
 				break;
 			case 'i':
 				printf("%d", va_arg(p_all, int));
@@ -44,7 +36,13 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", str);
 				break;
-		} i++;
+		} 
+		for (j = 0; j < 4; j++)
+		{	
+			if ((letter[j] == format[i]) && format[i + 1])
+				printf(", ");
+		}
+		i++;
 	}
 	printf("\n");
 	va_end(p_all);
