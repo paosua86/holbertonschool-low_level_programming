@@ -9,12 +9,21 @@
 void print_all(const char * const format, ...)
 {
 	va_list p_all;
-	int i = 0;
+	int i = 0, j = 0; 
+	const char form[] = "cifs";
+	char *str;
 
 	va_start(p_all, format);
-	
-	while (format[i] && format != NULL)
+	while (format[i] && format)
 	{
+		while (form[j])
+		{
+			if (format[i] == form[j])
+			{
+				printf(", ");
+				break;
+			} j++;
+		}
 		switch (format[i])
 		{	
 			case 'c':
@@ -27,16 +36,15 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(p_all, double));
 				break;
 			case 's':
-				if (va_arg(p_all, char*) == NULL)
-					printf("nill");
-				printf("%s", va_arg(p_all, char*));
-
-		/*if (separator != NULL && i < (n - 1))
-			printf("%s", separator);
-		if (strings == '\0')
-			printf("nil");*/	
-		}
-	i++;
+				str = (va_arg(p_all, char*));
+				if (!str)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", str);
+				break;
+		} i++;
 	}
 	printf("\n");
 	va_end(p_all);
