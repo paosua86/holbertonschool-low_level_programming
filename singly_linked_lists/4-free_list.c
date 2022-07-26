@@ -2,8 +2,8 @@
 
 /**
  * free_list - Write a function that frees a list_t list
- * @head: doble pointer to a lined list
- * Return: new_node_end
+ * @head: pointer to a list
+ * Return: nothing
  */
 
 void free_list(list_t *head)
