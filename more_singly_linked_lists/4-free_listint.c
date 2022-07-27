@@ -1,9 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - Write a function that adds a
- * new node at the beginning of a listint_t list
- * @n: elements of list
+ * free_listint - Write a function that frees a listint_t list
  * @head: head
  * Return: new node
  */
