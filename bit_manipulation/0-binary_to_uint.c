@@ -24,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 			if (b[i] == 49)
 				num += 1;
 		}
-		else 
+		else
 			return (0);
 	}
 	return (num);
