@@ -1,4 +1,5 @@
 #ifndef HEADER_FILE
+#define HEADER_FILE
 
 #include <stdio.h>
 #include <string.h>
@@ -14,5 +15,4 @@ int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
-#define HEADER_FILE
 #endif /* #ifndef HEADER_FILE */

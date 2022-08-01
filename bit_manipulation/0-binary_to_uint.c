@@ -9,7 +9,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
+	int i = 0;
 	unsigned int num;
 
 	num = 0;
@@ -18,9 +18,14 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = 0; b[i]; i++)
 	{
-		num <<= 1;
-		if (b[i] == 49)
-			num += 1;
+		if (b[i] == 48 || b[i] == 49)
+		{
+			num <<= 1;
+			if (b[i] == 49)
+				num += 1;
+		}
+		else 
+			return (0);
 	}
 	return (num);
 }
