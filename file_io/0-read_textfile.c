@@ -6,6 +6,7 @@
  * POSIX standard output
  * @filename: file
  * @letters: int number
+ * Return: write
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -33,10 +34,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	write1 = write(STDOUT_FILENO, buffer, read1);
-	if(read1 != write1)
+	if (read1 != write1)
 		return (0);
 	close(file);
 	free(buffer);
 	return (write1);
-}	
-
+}
