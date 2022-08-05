@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 	{
 		writefile = write(fl[1], buffer, readfile);
 		if (writefile == -1)
-			error100(argv[2]);
+			error99(argv[2]);
 		readfile = read(fl[0], buffer, sizeof(buffer));
 	}
 	if (readfile == -1)
