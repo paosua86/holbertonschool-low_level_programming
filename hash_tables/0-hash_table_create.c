@@ -10,7 +10,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *table = NULL;
-	hash_node_t **array = NULL; /* aka ‘struct hash_node_s **’ */
+	hash_node_t *array = NULL; /* aka ‘struct hash_node_s **’ */
 
 	table = malloc(sizeof(hash_table_t));
 	if (table == NULL)
@@ -22,6 +22,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(table);
 		return (NULL);
 	}
-	table->array = array;
+	table->array = &array;
 	return (table);
 }
