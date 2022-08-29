@@ -10,18 +10,18 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *table = NULL;
-	hash_node_t *array = NULL; /* aka ‘struct hash_node_s **’ */
+	hash_node_t **array = NULL; /* aka ‘struct hash_node_s **’ */
 
 	table = malloc(sizeof(hash_table_t));
 	if (table == NULL)
 		return (NULL);
 	table->size = size;
-	array = malloc(sizeof(hash_node_t) * size);
+	array = calloc(size, sizeof(hash_node_t));
 	if (array == NULL)
 	{
 		free(table);
 		return (NULL);
 	}
-	table->array = &array;
+	table->array = array;
 	return (table);
 }
