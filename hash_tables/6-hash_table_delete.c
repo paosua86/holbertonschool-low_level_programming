@@ -1,14 +1,14 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_print - Write a function that prints a hash table.
+ * hash_table_delete - Write a function that deletes a hash table.
  * @ht: ht is the hash table
  * Return: nothing
 */
 
 void hash_table_delete(hash_table_t *ht)
 {
-    unsigned long int i;
+	unsigned long int i;
 	hash_node_t *delete;
 
 	if (ht != NULL)
