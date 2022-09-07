@@ -1,5 +1,16 @@
+*.pdf
+*.pyc
+*.tar
+*.tgz
+*.bz2
+*.cnf
+*.cfg
+*.log
 *~
-*#
 *main.c
+*.json
+# Executables
 *.exe
-_putchar.c
+*.out
+*.app
+*.o
